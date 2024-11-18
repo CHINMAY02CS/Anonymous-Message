@@ -62,6 +62,7 @@ const UserSchema: Schema<User> = new Schema({
   messages: [MessageSchema],
 });
 
+//checking if the model is already existing or else creating new
 const UserModel =
   (mongoose.models.User as mongoose.Model<User>) ||
   mongoose.model<User>("User", UserSchema);
